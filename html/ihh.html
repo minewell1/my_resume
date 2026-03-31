@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANCHETA'S PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background:  #ebf1f5;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; }
+
+#firstSection {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.my {
+    font-size: clamp(32px, 6vw, 70px);
+    position:absolute;
+    top: clamp(30px, 5vw, 70px);
+    left: clamp(20px, 10vw, calc(50% - 480px + 50%));
+    z-index: 10;
+    color: #1a1a1a;
+    left: 50%;
+    transform: translateX(calc(-50% - clamp(100px, 25vw, 480px)));
+}
+
+.title-block {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: clamp(150px, 17vw, 170px);
+    flex-wrap: nowrap;
+}
+
+.title-row {
+    display: inline-flex;
+    align-items: flex-end;
+    line-height: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(60px, 15vw, 180px);
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    z-index: -1;
+    transform: scaleY(1.7);
+}
+
+.port  { margin-right: clamp(-25px, -3vw, -30px); }
+.folio { margin-left:  clamp(-61px, -7vw, -80px); }
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(100px, 15vw, 200px);
+    z-index: 1;
+    margin-top: clamp(-106px, -10vw, -100px);
+}
+
+.image-wrapper img {
+    height: auto;
+    display: block;
+    z-index: 1;
+    width: 100%;
+}
+
+.name-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(12px, 2.5vw, 30px);
+    letter-spacing: clamp(1px, 0.5vw, 4px);
+    color: #888888;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: clamp(10px, 2vw, 30px);
+}
+
+
+nav { width: 100%; }
+
+.options {
+    margin-top: clamp(30px, 5vw, 80px);
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+}
+
+.options li a {
+    color: #1a1a1a;
+    font-size: clamp(14px, 2vw, 20px);
+    padding: clamp(10px, 2.5vw, 30px) clamp(14px, 3vw, 60px);
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.options li a:hover  { color: #888888; }
+.options li a:active { color: #677172; }
+
+
+#secondSection {
+    margin-top: clamp(-20px, -3vw, -70px);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.id {
+    display: flex;
+    align-items: flex-start;
+    width: clamp(120px, 20vw, 300px);
+    flex-shrink: 0;
+}
+
+.id img {
+    display: block;
+    width: 85%;
+    margin-top: clamp(80px, -20vw, -980px);
+    position: sticky;
+    top: 25px;
+    height: fit-content;
+    border-radius: 500px;
+}
+
+
+.aboutEd {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.about h1 {
+    margin-top: clamp(30px, 5vw, 100px);
+    margin-left: -20px;
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+#secondSection h2 {
+    margin-top: 20px;
+    margin-left: -20px;
+    font-size: clamp(18px, 2.5vw, 30px);
+}
+
+.about p, .aboutMe p {
+    font-size: clamp(14px, 1.6vw, 18px);
+    color: #555;
+    line-height: 1.7;
+    max-width: 900px;
+    margin-left: -20px;
+}
+
+.education ol,
+.loves ol,
+.beliefs ol {
+    margin-top: 10px;
+}
+
+.education li,
+.loves li,
+.beliefs li {
+    font-size: clamp(14px, 1.6vw, 18px);
+    color: #555;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+
+#MidtermTasks h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: clamp(20px, 3vw, 32px);
+}
+
+
+.allTask {
+    background-color: #c9ddf0;
+    width: 100%;
+    min-height: 70px;
+    font-size: clamp(14px, 2vw, 24px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    transition: background-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    color: #1a1a1a;
+}
+
+.Boxes {
+    display: block;
+    padding: 6px 16px 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.Boxes a { display: block; }
+
+.Boxes a .allTask        { color: #1a1a1a; }
+.Boxes a:hover  .allTask {
+    background-color: #a8c9e8;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(90, 143, 196, 0.3);
+}
+.Boxes a:active .allTask { background-color: #8fb8de; }
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 8px;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    gap: 4px;
+    padding: 0 10px;
+    text-align: center;
+}
+.contacts h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: clamp(20px, 3vw, 32px);
+}
+.contacts aside,
+.contacts aside a {
+    color: #050505;
+    font-size: clamp(13px, 1.6vw, 18px);
+    transition: color 0.2s;
+}
+.contacts aside {
+    padding: 6px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.contacts aside:hover { background: rgba(149,177,238,0.18); }
+.contacts aside a:hover { color: #464545; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: rgb(107, 106, 106);
+    background-color: #a8bce7;
+    font-size: clamp(12px, 1.4vw, 16px);
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .my {
+        position: static;
+        transform: none;
+        font-size: 28px;
+        text-align: center;
+        margin-left: -330px;
+    }
+
+    .title-block {
+        margin-top: 15px;
+    }
+
+    .title-row {
+        transform: scaleY(1.6);
+        font-size: 70px;
+    }
+
+    .image-wrapper img{
+        width: 110px;
+        margin-top: -13px;
+    }
+
+    .port  { margin-right: clamp(-20px, -2vw, -30px); }
+    .folio { margin-left:  clamp(-38px, -6vw, -70px); }
+
+
+    .id, .id img{position: static;}
+
+.aboutEd{margin-top: -300px;}
+
+    .about h1,
+    #secondSection h2 {
+        margin-left: 0;
+    }
+
+    .about p, .aboutMe p {
+        margin-left: 0;
+    }
+
+    #secondSection {
+        padding: 5px 16px;
+        margin-top: 0;
+    }
+
+    .options {
+        gap: 4px;
+    }
+
+    .options li a {
+        padding: 10px 14px;
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .id { position: sticky;
+        margin-top: 370px;}
+    
+    .id img {
+        margin-top: -600px;
+        width: 90%;
+        position: sticky;
+    }
+
+
+    .title-row {
+        font-size: 100px;
+    }
+
+    .image-wrapper {
+        width: 120px;
+        margin-top: -50px;
+    }
+
+    .my {
+        font-size: 44px;
+        top: 40px;
+    }
+
+    #secondSection {
+        margin-top: 250px;
+    }
+
+    .options {
+        gap: 4px;
+    }
+
+    .options li a {
+        padding: 7px 11px;
+    }
+}
+
+
+@media(max-width:471px){
+
+    .my{margin-left: -280px;}
+
+    .image-wrapper img{
+        width: 95px;
+        margin-top: -1.5px;
+    }
+
+    .title-row{
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 90px;}
+
+    .port  { margin-right: clamp(-35px, -4vw, -50px); }
+    .folio { margin-left:  clamp(-52px, -6vw, -80px); }
+
+    
+        .name-tag{font-size: 20px;}
+
+    .options {
+        gap: 3px;
+    }
+
+    .options li a {
+        padding: 3px 5px;
+        font-size: 13px;
+    }
+    
+    .id { position: static;
+        margin-top:620px;
+        margin-bottom: -150px;}
+    
+    .id img {
+        width: 150px;
+        position: static;
+    }
+
+    #secondSection {
+        margin-top: -50px;
+    }
+}
+</style>
+</head>
+<body>
+
+<main id="firstSection">
+    <span class="my"><b>My</b></span>
+
+    <section class="title-block">
+        <div class="title-row"><span class="port"><b>PORT</b></span></div>
+
+        <div class="image-wrapper">
+            <img src="Task/image/animate.png" alt="animate image">
+        </div>
+
+        <div class="title-row"><span class="folio"><b>FOLIO</b></span></div>
+    </section>
+
+    <p class="name-tag">KRISTINE AICEL P. ANCHETA</p>
+
+    <nav>
+        <ul class="options">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">My Education</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">My Contacts</a></li>
+        </ul>
+    </nav>
+</main>
+
+<!-- ===== ABOUT / EDUCATION ===== -->
+<main id="secondSection">
+    <aside class="id">
+        <img src="Task/image/picPort.jpg" alt="ID picture">
+    </aside>
+
+    <main class="aboutEd">
+        <section class="about" id="about">
+            <h1>Hi, I'm KRISTINE AICEL!!!</h1>
+            <p>This portfolio contains all my lab exercises during the midterm of
+                2nd semester in WS101. It shows my dedication to learn basic front-end
+                coding from HTML to CSS.
+            </p>
+        </section>
+
+        <article class="aboutMe">
+            <h2>About Me</h2>
+            <p>I am currently 18 yrs old, studying at Pampanga State Agricultural University (PSAU).
+            My interest in coding bloomed — I already tried programming in my SHS era, and I admit
+            it's really hard and sometimes made me cry, but I realized I really enjoy making websites and programs
+            from scratch. The happiness it gives me is on another level, especially when it runs perfectly.
+            Now, one of my dreams is not only to become a web developer but also a good IT professional one day.
+            </p>
+        </article>
+
+        <aside class="beliefs">
+            <h2>What I Believe In:</h2>
+            <ul type="circle">
+                <li>At the right time, the LORD will make it happen.</li>
+                <li>Don't do to others what you don't want others to do to you. (Golden Rule)</li>
+                <li>Failure is part of the journey to success.</li>
+                <li>Peace comes from caring less about what others say.</li>
+            </ul>
+        </aside>
+
+        <section class="education" id="education">
+            <h2>Education</h2>
+            <ol type="i">
+                <li>COLLEGE
+                    <ul>
+                        <li><b>Course:</b> Information Technology (IT)</li>
+                        <li><b>Degree:</b> Bachelor of Science in Information Technology (BSIT)</li>
+                        <li><b>School:</b> Pampanga State Agricultural University (PSAU)</li>
+                    </ul>
+                </li>
+                <li>SHS
+                    <ul>
+                        <li><b>Track:</b> Technical-Vocational-Livelihood (TVL)</li>
+                        <li><b>School:</b> Benigno S. Aquino National Highschool (BSANHS)</li>
+                        <li><b>Year Graduated:</b> 2025</li>
+                    </ul>
+                </li>
+                <li>JHS
+                    <ul>
+                        <li><b>Specialization:</b> Computer System Servicing (CSS)</li>
+                        <li><b>School:</b> Benigno S. Aquino National Highschool (BSANHS)</li>
+                        <li><b>Year Graduated:</b> 2023</li>
+                    </ul>
+                </li>
+                <li>ELEMENTARY
+                    <ul>
+                        <li><b>School:</b> Pitabunan Elementary School</li>
+                        <li><b>Year Graduated:</b> 2019</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <aside class="loves">
+            <h2>I Love:</h2>
+            <ul type="circle">
+                <li>Serving and worshiping God at church.</li>
+                <li>Bonding with Family &amp; Friends</li>
+                <li>Going to beaches, mountains, and anywhere surrounded by nature</li>
+                <li>Listening to Music</li>
+                <li>Trying new Things</li>
+            </ul>
+        </aside>
+    </main>
+</main>
+
+<main id="MidtermTasks">
+    <h1>Midterm Tasks</h1>
+
+    <section class="Boxes" id="projects">
+        <a href="Task/Task1Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 1:</span>
+                <span>Resume Writing using HTML</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task2Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 2:</span>
+                <span>Nested List</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task3Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 3:</span>
+                <span>Image Map</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task4Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 4:</span>
+                <span>HTML Forms</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task5Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 5:</span>
+                <span>Applying CSS Style on Resume</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task6Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 6:</span>
+                <span>Using CSS Display Property</span>
+            </aside>
+        </a>
+
+        <a href="Task/Task7Code.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Task 7:</span>
+                <span>Semantic</span>
+            </aside>
+        </a>
+
+        <a href="Task/FinalTask.html">
+            <aside class="allTask">
+                <span class="tittleTasks">Final Task:</span>
+                <span>Style Sheet</span>
+            </aside>
+        </a>
+    </section>
+</main>
+
+<main class="contacts" id="contact">
+    <h1>Contacts</h1>
+    <aside class="detail">📧Email: <a href="mailto:anchetakristineaicel@gmail.com">anchetakristineaicel@gmail.com</a></aside>
+    <aside class="detail">📘Facebook: <a href="https://www.facebook.com/aicel.ncht">Kristine Ancheta</a></aside>
+    <aside class="detail">📸Instagram: <a href="https://www.instagram.com/tintin.n_n?igsh=cnUyNG9jaHUyMjFo">tintin.n_n</a></aside>
+    <aside class="detail">📞Phone: 09100751950</aside>
+</main>
+
+<footer>
+    <h4>© 2026 Kristine Aicel Ancheta</h4>
+</footer>
+
+</body>
+</html>

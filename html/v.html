@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>tmplate</title>
+
+        <style>
+           *{
+                box-sizing: border-box;
+            }
+
+            body{margin: 0;}
+
+            header
+            {
+                background-color: aquamarine;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer
+            {
+                background-color: aquamarine;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            ul
+            {
+                list-style-type: none;
+                background-color: aqua;
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            li {float: left;}
+            li a
+            {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                text-decoration: none;
+
+            }
+
+            li a:hover
+            {
+                background-color: #15e0ff;
+            }
+
+            aside
+            {
+                width: 20%;
+                float: left;
+            }
+
+            section
+            {
+                width: 40%;
+                float: left;
+                padding: 5px;
+            }
+
+            article
+            {
+                width: 40%;
+                float: left;
+                padding: 5px;
+            }
+
+            footer
+            {
+                clear: both;
+                padding: 5px;
+
+            }
+
+            @media screen and (max-width:800px)
+            {
+            aside,
+            section,
+            article
+                {
+                width: 100px;
+                float: none;
+                }
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>WELCOME TO MY PAGE</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#news">news</a></li>
+                <li><a href="#contacs">contacs</a></li>
+                <li><a href="#nabout">about</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <h2>Aside</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur 
+                adipisicing elit. Atque, magni. Nobis tempore repellat, 
+                fugit dolore quas voluptas explicabo quam magnam ad voluptate 
+                consequuntur in iusto aspernatur delectus?
+                 Quisquam, exercitationem reiciendis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Consectetur tempora neque alias debitis
+                 unde quo perferendis vitae, temporibus nemo repudiandae
+                  omnis exercitationem enim accusantium adipisci, 
+                  reprehenderit quae, repellat asperiores quia!</p>
+        </aside>
+
+        <section>
+            <h2>Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur
+                 adipisicing elit. Aliquid non alias quae
+                  a fuga laborum ea laboriosam exercitationem,
+                   nisi totam tenetur saepe repudiandae beatae
+                    consectetur unde eos quis nulla officia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur
+                 adipisicing elit. Temporibus dicta, doloribus
+                  consequatur accusantium ipsum 
+                  laudantium illo esse? Maxime quod quasi sequi
+                   corrupti, facere exercitationem eaque aspernatur,
+                    deserunt nemo sunt autem.</p>          
+        </section>
+
+        <article>
+            <h2>Article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur
+                 adipisicing elit. Similique, non explicabo
+                  vitae nostrum quaerat, nemo, soluta vel
+                   exercitationem repudiandae esse tenetur
+                    ratione minus voluptas labore veritatis
+                     at recusandae magni nobis!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur
+                 adipisicing elit. Blanditiis repellat
+                  ab quibusdam nemo quaerat, ipsum temporibus
+                   debitis? Repellat sit ad pariatur, iste
+                    repellendus earum, necessitatibus consequuntur
+                     distinctio maiores ipsa exercitationem?</p>
+        </article>
+
+        <footer>
+            <h1>This is Footer</h1>
+        </footer>
+
+    </body>
+</html>
